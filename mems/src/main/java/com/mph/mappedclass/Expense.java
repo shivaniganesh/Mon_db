@@ -1,11 +1,11 @@
-package com.mph.joinedsubclass;
+package com.mph.mappedclass;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
 @DiscriminatorValue("Ex")
-public class Expense extends UserTable {
+public class Expense extends SuperTable {
 	private int amount;
 	private String category;
 	private String description;
