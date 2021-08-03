@@ -14,8 +14,14 @@
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.hbm2ddl.auto">create</property>
 		
-		<mapping class="com.mph.mems.Expense"/>
+	  	 <!--<mapping class="com.mph.mems.Expense"/>
 		<mapping class="com.mph.mems.Income"/>	
-		<mapping class="com.mph.mems.User"/>	
+		<mapping class="com.mph.mems.UserTable"/>  -->
+		
+		 <mapping class="com.mph.joinedsubclass.UserTable"/>
+		
+		<mapping class="com.mph.joinedsubclass.Income"/>
+		<mapping class="com.mph.joinedsubclass.Expense"/>  
+			
 	</session-factory>
 </hibernate-configuration>

@@ -1,72 +1,88 @@
-package com.mph.mems;
+package com.mph.joinedsubclass;
 
+import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
-import javax.persistence.Embedded;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+
 
 @Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorColumn(name = "EMP_TYPE")
+@DiscriminatorColumn(name = "TYPE")
 @Entity
-public class User {
-	public User(int uid, Fullname name, String password, String email, String phoneno) {
-		super();
-		this.uid = uid;
-		this.name = name;
-		this.password = password;
-		this.email = email;
-		this.phoneno = phoneno;
-	}
-	public User() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+public class UserTable {
 	@Id
-	@GeneratedValue
-	private int uid;
-	@Embedded
-	private Fullname name;
+	private int userId;
+
+	@Column
+	private Name name;
 	private String password;
 	private String email;
 	private String phoneno;
-	public int getUid() {
-		return uid;
+	public UserTable() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
-	public void setUid(int uid) {
-		this.uid = uid;
+
+	
+
+	public UserTable(int userId, Name name, String password, String email, String phoneno) {
+		super();
+		this.userId = userId;
+		this.name = name;
+		this.password = password;
+		this.email = email;
+		this.phoneno = phoneno;
 	}
-	public Fullname getName() {
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	public Name getName() {
 		return name;
 	}
-	public void setName(Fullname name) {
+
+	public void setName(Name name) {
 		this.name = name;
 	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
 	public String getEmail() {
 		return email;
 	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
 	public String getPhoneno() {
 		return phoneno;
 	}
+
 	public void setPhoneno(String phoneno) {
 		this.phoneno = phoneno;
 	}
+
+
+
 	@Override
 	public String toString() {
-		return "User [uid=" + uid + ", name=" + name + ", password=" + password + ", email=" + email + ", phoneno="
-				+ phoneno + "]";
+		return "UserTable [userId=" + userId + ", name=" + name + ", password=" + password + ", email=" + email
+				+ ", phoneno=" + phoneno + "]";
 	}
-	
-	
+
 }
