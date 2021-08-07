@@ -1,4 +1,4 @@
-package com.mph.joinedsubclass;
+package com.mph.monthlyexpdb;
 
 import javax.persistence.Embeddable;
 

@@ -4,7 +4,6 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
-@DiscriminatorValue("Ex")
 public class Expense extends SuperTable {
 	private int amount;
 	private String category;

@@ -16,15 +16,15 @@
 		
 	  	
 		
-		 <!--  <mapping class="com.mph.joinedsubclass.UserTable"/>
+		 <mapping class="com.mph.monthlyexpdb.UserTable"/>
 		
-		<mapping class="com.mph.joinedsubclass.Income"/>
-		<mapping class="com.mph.joinedsubclass.Expense"/> -->
+		<mapping class="com.mph.monthlyexpdb.Income"/>
+		<mapping class="com.mph.monthlyexpdb.Expense"/> 
 		
 		
-		<mapping class="com.mph.mappedclass.UserTable"/>
+	 <!-- 	<mapping class="com.mph.mappedclass.UserTable"/>
 		<mapping class="com.mph.mappedclass.Income"/>
-		<mapping class="com.mph.mappedclass.Expense"/> 
+		<mapping class="com.mph.mappedclass.Expense"/> -->
 			
 	</session-factory>
 </hibernate-configuration>

@@ -1,4 +1,4 @@
-package com.mph.joinedsubclass;
+package com.mph.monthlyexpdb;
 
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
@@ -9,12 +9,10 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
-@Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorColumn(name = "TYPE")
+
 @Entity
-public class UserTable {
-	@Id
-	private int userId;
+public class UserTable extends SuperTable{
+	
 
 	@Embedded
 	private Name name;
@@ -26,24 +24,8 @@ public class UserTable {
 		// TODO Auto-generated constructor stub
 	}
 
-	
 
-	public UserTable(int userId, Name name, String password, String email, String phoneno) {
-		super();
-		this.userId = userId;
-		this.name = name;
-		this.password = password;
-		this.email = email;
-		this.phoneno = phoneno;
-	}
 
-	public int getUserId() {
-		return userId;
-	}
-
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
 
 	public Name getName() {
 		return name;
@@ -81,7 +63,7 @@ public class UserTable {
 
 	@Override
 	public String toString() {
-		return "UserTable [userId=" + userId + ", name=" + name + ", password=" + password + ", email=" + email
+		return "UserTable [name=" + name + ", password=" + password + ", email=" + email
 				+ ", phoneno=" + phoneno + "]";
 	}
 
